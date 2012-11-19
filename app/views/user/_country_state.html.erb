@@ -1,0 +1,12 @@
+<p>State or Territory:<br />
+  <%= form_for "user" do |addr_form| %>
+      <% if !@cont_states.blank? %>
+          <%= addr_form.select :state1, @cont_states.collect{|s| [s[1]["name"]]}, {:prompt => 'Select State'},
+                               {:style => 'width: 180px'} %>
+          <%#=	 @cont_states.collect{|s| s[1]["name"]} %>
+
+      <% else %>
+          <%= addr_form.text_field :state %>
+      <% end %>
+  <% end %>
+</p>

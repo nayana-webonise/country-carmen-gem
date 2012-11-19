@@ -1,0 +1,25 @@
+<!--<p>State or Territory<br />-->
+<!--< % fields_for "user" do |addr_form| %>-->
+<!--< % if !states.blank? %>-->
+<!--< %= addr_form.select :state, states.collect{|s| [s[0],s[0]]}, {:prompt => 'Select State'},-->
+<!--{:style => 'width: 180px'} %>-->
+<!--< % else %>-->
+<!--< %= addr_form.text_field :state %>-->
+<!--< % end %>-->
+<!--< % end %>-->
+<!--</p>-->
+
+<p>State or Territory:<br />
+  <%= form_for "user" do |addr_form| %>
+      <% if !@states.blank? %>
+        <div id= "addressStates">
+          <%= addr_form.select :state, @states.collect{|s| [s[0],s[0]]}, {:prompt => 'Select State'},
+                               {:style => 'width: 180px'} %>
+
+          <%= %>
+    <% else %>
+        <%= addr_form.text_field :state %>
+    <% end %>
+    </div>
+<% end %>
+</p>

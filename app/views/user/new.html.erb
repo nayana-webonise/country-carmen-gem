@@ -1,0 +1,45 @@
+<!--< % fields_for "user" do |addr_form| %>-->
+<!--<p>-->
+<!--Country<br />-->
+<!--< %= addr_form.select :country, Carmen::country_names, {:selected => 'United States'} %>-->
+<!--</p>-->
+<!--<div id="addressStates">-->
+<!--< %= render :partial => 'addresses/states',-->
+<!--:locals => {:states => Carmen::states('US'), :form => addr_form} %>-->
+<!--</div>-->
+<!--< % end %>-->
+
+<h1>Using Carmen Gem</h1><br>
+<%= form_for "user" do |addr_form|  %>
+    <div id ="carmen" >
+      <div id="user_country">
+        <p>
+          Country:<br /> <br>
+          <%= addr_form.select :country, Carmen::country_names, {:selected => 'India'} %>
+        </p>
+      </div>
+      <div id="addressStates">
+        <%= render :partial => 'user/carmen_state',  :locals => {:states => Carmen::states('US'), :form => addr_form} %>
+      </div>
+      <div class="form-actions">
+        <%= addr_form.submit  "SAVE", id: "carmen_submit" %>
+      </div>
+    </div>
+    <br><br>
+
+    <h1>Using Country Gem</h1><br>
+    <div id ="country_gem">
+      <div id="country" >
+        <p>
+          Country:<br /><br>
+          <%= addr_form.select :cont, Country.all, {:selected => 'India'} %>
+        </p>
+      </div>
+      <div id="address">
+        <%= render :partial => 'user/country_state' %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= addr_form.submit "SAVE", id: "country_submit" %>
+    </div>
+<% end %>

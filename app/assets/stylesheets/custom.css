@@ -1,0 +1,39 @@
+#carmen_submit{
+    margin-left: 100px;
+}
+
+#country_submit{
+    margin-left: 100px;
+}
+
+#carmen{
+    border: 1px solid #E3E3E3;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+    width: 500px;
+    margin-left: 20px;
+}
+
+#country_gem{
+    border: 1px solid #E3E3E3;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+    width: 500px;
+    margin-left: 20px;
+}
+
+
+h1 {
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 24px;
+    line-height: 40px;
+    width: 550px;
+    margin-left: 20px;
+}
+
